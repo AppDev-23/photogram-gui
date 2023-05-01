@@ -1,0 +1,32 @@
+<h1>List of photos </h1>
+
+Image **URL form**
+
+<table border = "1">
+<tr>
+  <th> Image</th>
+
+  <th> Caption </th>
+
+  <th> Owner </th>
+
+  <th> Posted </th>
+
+  <th>    </th>
+</tr>
+
+<% @list_of_photos.each do |a_thing|%>
+<tr>
+  <td> <img src ="<%=a_thing.image%>"></td>
+
+  <td> <%=a_thing.caption%> </td>
+
+ <td> <%=a_thing.owner_id%></td>
+
+  <td> <%=a_thing.created_at%></td>
+
+  <td>  <a href="/photos/<%= a_thing.id%>">Show details</a></td>
+</tr>
+
+<% end %>
+</table>
