@@ -20,4 +20,10 @@ class PhotosController < ApplicationController
    # else
     render(:template => "photos_templates/show.html.erb")
   end
+
+  def eliminate
+    
+    render(:template => "photos_templates/eliminate.html.erb")
+  end
+
 end
