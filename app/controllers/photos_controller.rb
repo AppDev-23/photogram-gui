@@ -102,11 +102,6 @@ class PhotosController < ApplicationController
 
     the_photo.save
 
-
-
-
-
-
     redirect_to("/photos/"+ the_photo.id.to_s)
   end
 
