@@ -18,4 +18,20 @@ class UsersController < ApplicationController
    # else
     render(:template => "user_templates/show.html.erb")
   end
+
+  def add
+
+    i_user = params.fetch("input_username")
+
+    a_new_user = User.new
+    a_new_user.username = i_user
+
+
+    a_new_user.save
+
+
+  #render(:template => "photos_templates/add.html.erb")
+
+    redirect_to("/users/"+  a_new_user.username)
+  end
 end
