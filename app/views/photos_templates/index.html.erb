@@ -1,6 +1,17 @@
 <h1>List of photos </h1>
 
-Image **URL form**
+<form action="/insert_photo_record">
+  <label for="browser_input">Image</label>
+  <input id="browser_input" type="text" name="input_image" placeholder="Enter a URL for the image...">
+
+  <label for="browser_caption">Caption</label>
+  <textarea id="browser_caption" name="input_caption" placeholder="Enter a caption for the photo..."></textarea>
+
+  <label for="browser_user_id">Owner ID</label>
+  <input id="browser_user_id" type="text" name="input_owner_id" placeholder="Enter an ID of a User">
+
+  <button>Add photo</button>
+</form>
 
 <table border = "1">
 <tr>
@@ -21,7 +32,7 @@ Image **URL form**
 
   <td> <%=a_thing.caption%> </td>
 
- <td> <%=a_thing.owner_id%></td>
+ <td> <%=a_thing.poster.username%></td>
 
   <td> <%=a_thing.created_at%></td>
 
